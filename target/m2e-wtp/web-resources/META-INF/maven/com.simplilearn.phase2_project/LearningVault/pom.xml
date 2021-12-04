@@ -8,12 +8,23 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>LearningVault Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	
+	<properties>
+		<spring-mvc.version>5.3.13</spring-mvc.version>
+		<hibernate.version>5.4.1.Final</hibernate.version>
+		<mysql.connector.version>8.0.27</mysql.connector.version>
+		<c3po.version>0.9.5.2</c3po.version>
+
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	
 	<dependencies>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>5.3.13</version>
+			<version>${spring-mvc.version}</version>
 		</dependency>
 
 		<dependency>
@@ -27,11 +38,23 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>4.0.1</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.27</version>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${c3po.version}</version>
 		</dependency>
 
 		<dependency>
